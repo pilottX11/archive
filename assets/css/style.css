@@ -92,7 +92,7 @@ body {
 
 .list-head {
   display: grid;
-  grid-template-columns: 2.5fr 1.5fr 0.8fr 1fr 0.8fr;
+  grid-template-columns: 2.5fr 1.5fr 0.8fr 1fr 1.3fr;
   gap: 8px;
   padding: 8px 12px;
   border-bottom: 2px solid var(--fg);
@@ -110,7 +110,7 @@ body {
 
 .entry {
   display: grid;
-  grid-template-columns: 2.5fr 1.5fr 0.8fr 1fr 0.8fr;
+  grid-template-columns: 2.5fr 1.5fr 0.8fr 1fr 1.3fr;
   gap: 8px;
   align-items: center;
   padding: 14px 12px;
@@ -149,7 +149,13 @@ body {
   font-size: 12px;
 }
 
-.entry .link a {
+.entry .actions {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.entry .actions a {
   display: inline-block;
   border: 2px solid var(--fg);
   padding: 4px 10px;
@@ -159,9 +165,28 @@ body {
   white-space: nowrap;
 }
 
-.entry .link a:hover {
+.entry .actions a.dl:hover {
   background: var(--fg);
   color: var(--bg);
+}
+
+.entry .actions a.vt {
+  border-color: #2e7d32;
+  color: #2e7d32;
+}
+
+.entry .actions a.vt:hover {
+  background: #2e7d32;
+  color: var(--bg);
+}
+
+.entry .actions .vt-none {
+  display: inline-block;
+  border: 2px dashed var(--border);
+  padding: 4px 10px;
+  font-size: 12px;
+  color: var(--muted);
+  white-space: nowrap;
 }
 
 .empty-state {
@@ -193,5 +218,5 @@ body {
     grid-template-columns: 1fr;
     gap: 6px;
   }
-  .entry .link { margin-top: 6px; }
+  .entry .actions { margin-top: 6px; }
 }

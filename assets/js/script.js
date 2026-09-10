@@ -41,6 +41,10 @@ function renderEntries() {
       .map(t => `<span class="pill">${escapeHtml(t)}</span>`)
       .join("");
 
+    const vtHtml = entry.virustotal
+      ? `<a class="vt" href="${entry.virustotal}" target="_blank" rel="noopener noreferrer">virustotal</a>`
+      : `<span class="vt vt-none">no scan</span>`;
+
     li.innerHTML = `
       <span class="name">
         ${escapeHtml(entry.name)}
@@ -49,7 +53,10 @@ function renderEntries() {
       <span class="tags-col">${tagsHtml}</span>
       <span class="size">${escapeHtml(entry.size || "-")}</span>
       <span class="date">${escapeHtml(entry.date || "-")}</span>
-      <span class="link"><a href="${entry.link}" target="_blank" rel="noopener noreferrer">download</a></span>
+      <span class="actions">
+        <a class="dl" href="${entry.link}" target="_blank" rel="noopener noreferrer">download</a>
+        ${vtHtml}
+      </span>
     `;
     listEl.appendChild(li);
   }
