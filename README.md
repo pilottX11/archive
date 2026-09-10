@@ -50,7 +50,7 @@ There is intentionally no in-site upload form. To add an entry:
    grab a direct link.
 2. **(Recommended)** Scan the file on [virustotal.com](https://www.virustotal.com) and copy the
    report URL (`https://www.virustotal.com/gui/file/<hash>`).
-3. Fork the repo, open `data/entries.json`, and append a new object to the array:
+3. Open `data/entries.json`, and append a new object to the array:
 
 ```json
    {
