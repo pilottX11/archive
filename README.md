@@ -2,9 +2,9 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/opensource-archive-111111?style=for-the-badge">
-  <img src="https://img.shields.io/github/stars/yourname/opensource?style=for-the-badge">
-  <img src="https://img.shields.io/github/forks/yourname/opensource?style=for-the-badge">
-  <img src="https://img.shields.io/github/last-commit/yourname/opensource?style=for-the-badge">
+  <img src="https://img.shields.io/github/stars/pilottX11/archive?style=for-the-badge">
+  <img src="https://img.shields.io/github/forks/pilottX11/archive?style=for-the-badge">
+  <img src="https://img.shields.io/github/last-commit/pilottX11/archive?style=for-the-badge">
 </p>
 
 <p align="center">
@@ -118,7 +118,7 @@ Scans        Optional per-entry VirusTotal link
 4. Every merged PR touching `data/entries.json` updates the live list.
 
 <p align="center">
-  <a href="https://github.com/yourname/opensource">
+  <a href="https://github.com/pilottX11/archive">
     <img src="https://img.shields.io/badge/View%20Repository-GitHub-181717?style=for-the-badge&logo=github">
   </a>
 </p>
