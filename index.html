@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>opensource</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <h1 class="logo">opensource</h1>
+    <p class="tagline">a plain archive of downloads</p>
+  </header>
+
+  <main class="container">
+
+    <div class="controls">
+      <input type="text" id="search" placeholder="search..." autocomplete="off">
+      <div class="tags" id="tagFilters">
+        <button class="tag-btn active" data-tag="all">all</button>
+        <button class="tag-btn" data-tag="base">base</button>
+        <button class="tag-btn" data-tag="imgui">imgui</button>
+        <button class="tag-btn" data-tag="leak">leak</button>
+      </div>
+    </div>
+
+    <div class="list-head">
+      <span class="col name">name</span>
+      <span class="col tags-col">tags</span>
+      <span class="col size">size</span>
+      <span class="col date">date</span>
+      <span class="col link"></span>
+    </div>
+
+    <ul id="entryList" class="entry-list">
+      <!-- entries injected by script.js -->
+    </ul>
+
+    <p id="emptyState" class="empty-state" hidden>nothing here.</p>
+
+  </main>
+
+  <footer class="site-footer">
+    <a href="https://github.com/" target="_blank" rel="noopener">contribute on github</a>
+  </footer>
+
+<script src="assets/js/script.js"></script>
+</body>
+</html>

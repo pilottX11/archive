@@ -1,0 +1,26 @@
+[
+  {
+    "name": "example-base-pack",
+    "description": "Starter base files for the project.",
+    "tags": ["base"],
+    "size": "12 MB",
+    "date": "2026-09-01",
+    "link": "https://example.com/downloads/example-base-pack.zip"
+  },
+  {
+    "name": "imgui-overlay-template",
+    "description": "Minimal Dear ImGui overlay boilerplate.",
+    "tags": ["imgui", "base"],
+    "size": "3.4 MB",
+    "date": "2026-08-20",
+    "link": "https://example.com/downloads/imgui-overlay-template.zip"
+  },
+  {
+    "name": "old-build-leak",
+    "description": "Leaked internal build, archived for reference.",
+    "tags": ["leak"],
+    "size": "1.1 GB",
+    "date": "2026-07-15",
+    "link": "https://example.com/downloads/old-build-leak.rar"
+  }
+]
