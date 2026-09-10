@@ -1,10 +1,20 @@
 :root {
-  --bg: #ffffff;
-  --fg: #111111;
-  --muted: #6b6b6b;
-  --border: #dcdcdc;
-  --accent: #111111;
+  --bg: #3f3f3f;
+  --fg: #f2f2f2;
+  --muted: #b8b8b8;
+  --border: #5c5c5c;
+  --hover: #383838;
+  --vt-color: #7fd685;
   --mono: "Courier New", Courier, monospace;
+}
+
+[data-theme="dark"] {
+  --bg: #0d0d0d;
+  --fg: #f0f0f0;
+  --muted: #8a8a8a;
+  --border: #2a2a2a;
+  --hover: #161616;
+  --vt-color: #4caf50;
 }
 
 * { box-sizing: border-box; }
@@ -16,7 +26,25 @@ body {
   font-family: var(--mono);
   font-size: 15px;
   line-height: 1.5;
+  transition: background 0.15s ease, color 0.15s ease;
 }
+
+.theme-toggle {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  font-family: var(--mono);
+  font-size: 11px;
+  text-transform: lowercase;
+  background: transparent;
+  border: 2px solid var(--fg);
+  color: var(--fg);
+  padding: 6px 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.theme-toggle:hover { background: var(--hover); }
 
 .site-header {
   padding: 64px 24px 24px;
@@ -25,11 +53,13 @@ body {
 }
 
 .logo {
-  font-size: clamp(40px, 9vw, 80px);
+  font-family: "Archivo Black", "Arial Black", sans-serif;
+  font-size: clamp(48px, 11vw, 100px);
   font-weight: 900;
-  letter-spacing: -1px;
+  letter-spacing: -2px;
   margin: 0;
   text-transform: lowercase;
+  line-height: 1;
 }
 
 .tagline {
@@ -64,7 +94,7 @@ body {
   min-width: 180px;
 }
 
-#search:focus { outline: none; background: #f5f5f5; }
+#search:focus { outline: none; background: var(--hover); }
 
 .tags {
   display: flex;
@@ -83,7 +113,7 @@ body {
   cursor: pointer;
 }
 
-.tag-btn:hover { background: #f0f0f0; }
+.tag-btn:hover { background: var(--hover); }
 
 .tag-btn.active {
   background: var(--fg);
@@ -117,7 +147,7 @@ body {
   border-bottom: 1px solid var(--border);
 }
 
-.entry:hover { background: #fafafa; }
+.entry:hover { background: var(--hover); }
 
 .entry .name {
   font-weight: 700;
@@ -171,12 +201,12 @@ body {
 }
 
 .entry .actions a.vt {
-  border-color: #2e7d32;
-  color: #2e7d32;
+  border-color: var(--vt-color);
+  color: var(--vt-color);
 }
 
 .entry .actions a.vt:hover {
-  background: #2e7d32;
+  background: var(--vt-color);
   color: var(--bg);
 }
 

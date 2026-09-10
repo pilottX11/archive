@@ -1,4 +1,5 @@
 const DATA_URL = "data/entries.json";
+const THEME_KEY = "opensource-theme";
 
 let allEntries = [];
 let activeTag = "all";
@@ -8,6 +9,27 @@ const listEl = document.getElementById("entryList");
 const emptyEl = document.getElementById("emptyState");
 const searchEl = document.getElementById("search");
 const tagButtons = document.querySelectorAll(".tag-btn");
+const themeToggle = document.getElementById("themeToggle");
+const rootEl = document.documentElement;
+
+function applyTheme(theme) {
+  if (theme === "dark") {
+    rootEl.setAttribute("data-theme", "dark");
+    themeToggle.textContent = "light mode";
+  } else {
+    rootEl.removeAttribute("data-theme");
+    themeToggle.textContent = "dark mode";
+  }
+}
+
+applyTheme(rootEl.getAttribute("data-theme") === "dark" ? "dark" : "grey");
+
+themeToggle.addEventListener("click", () => {
+  const isDark = rootEl.getAttribute("data-theme") === "dark";
+  const next = isDark ? "grey" : "dark";
+  try { localStorage.setItem(THEME_KEY, next); } catch (e) {}
+  applyTheme(next);
+});
 
 function escapeHtml(str) {
   const div = document.createElement("div");
